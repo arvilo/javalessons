@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operatorlar və şərt</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .border {
+            border: black solid 1px;
+            margin-bottom: 5px;
+            display: inline-block;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Operatorlar</h2>
+    <h3>Ədəd tipləri üçün</h3>
+    <ul>
+        <li>byte</li>
+        <li>short</li>
+        <li>int</li>
+        <li>long</li>
+        <li>double</li>
+        <li>float</li>
+    </ul>
+    <div class="border">
+        <h4>Toplama</h4>
+        <img src="./image5.png" alt="a">
+    </div>
+    <div class="border">
+        <h4>Fərq</h4>
+        <img src="./image6.png" alt="a">
+    </div>
+    <div class="border">
+        <h4>Hasil</h4>
+        <img src="./image7.png" alt="a">
+    </div>
+    <div class="border">
+        <h4>Nisbət</h4>
+        <img src="./image8.png" alt="a">
+        <p style="color: red;">
+            QEYD! Yadda saxlamaq lazımdır ki, əgər hər iki dəyişən tam <br> ədəd tipindədirsə bu bölünmə tam bölünmə
+            olacaq. Qalıq nəzərə alınmayacaq.
+        </p>
+    </div>
+    <div class="border">
+        <h4>Qalıqın tapılması</h4>
+        <img src="./image9.png" alt="a">
+        <p>Bu operator ədədin digər ədədə bölünməsindən alınan qalıqı hesablayır.</p>
+    </div>
+    <h3>String tipi üçün</h3>
+    <div class="border">
+        <p>String üçün yalnız toplama operatoru var. Bu sadəcə mətnləri birləşdirir.</p>
+        <img src="./image12.png" alt="a">
+    </div>
+    <h2>Şərh (comment)</h2>
+    <p>
+        Java dilində kod yazdıqda bəzən koda əlavə şərhlər qeyd etməyə ehtiyac olur.
+        Java Commentləri ilə, elə sətrlər yaza <br> bilərik ki, bu proqram icra olunduqda,
+        java tərəfindən "görməzdən gəlinir". Commentlərin 2 növü var:
+    </p>
+    <ol>
+        <li>Bir sətrlik</li>
+        <li>Çox sətrlik</li>
+    </ol>
+    <p>
+        Bir sətrlik comment yazmaq üçün sətrin əvvəlinə // əlavə etmək lazımdır.
+        Sətrdə bu işarədən sonra yazılan heç bir simvol <br> java tərəfindən oxunmur.
+    </p>
+    <img src="./image10.png" alt="a">
+
+    <p>
+        Çox sətrlik commentin açılışı və bağlanışı olur. Başlanğıc üçün /* bitirmək üçün */ .
+        Bu ikisi arasındakı bütün sətrlər <br> commentə əlavə olunur.
+    </p>
+    <img src="./image11.png" alt="a">
+    <h2>Şərt operatoru</h2>
+    <p>
+        Javada proqramın irəliləməsini şərtə görə dəyişmək üçün şərt operatorundan istifadə olunur.
+        Tutaq ki, bizim bir kod hissəmiz var ki, onun yalnız müəyyən şərt ödəndikdə icra olunmasını
+        istəyirik. Məsələn a dəyişənimin qiyməti 5-dən böyük olduqda "böyükdür" yazısı çap olunmasını
+        istəyirik.
+    </p>
+    <img src="./image13.png" alt="a">
+    <p>
+        Bu zaman yalnız a dəyişəni 5-dən böyük olduğu halda if-in mörtərizələri daxilindəki
+        kodlar işləyəcək. Əks halda işləməyəcək.
+    </p>
+    <p>
+        Əgər ki, bu şərt ödənməyəndə də müəyyən kodların icra olunmasını istəyirik. Bu zaman
+        if-in mörtərizələrindən dərhal sonra else açar sözünü yazıb birbaşa mörtərizələri açırıq.
+    </p>
+    <img src="./image14.png" alt="a">
+    <p>
+        Tutaq ki bizdə bir neçə şərt var. Bu zaman if else-dən istifadə olunur.
+    </p>
+    <img src="./image15.png" alt="a">
+</body>
+
+</html>
