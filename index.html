@@ -5,11 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proqramlaşdırma (java)</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-    <a href="https://meet.google.com/rtk-wyxn-cnn">Google Meet</a>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Dərs cədvəli</th>
+            </tr>
+            <tr>
+                <th>Gün</th>
+                <th>Saat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cümə axşamı (IV)</td>
+                <td>18:00</td>
+            </tr>
+            <tr>
+                <td>Bazar (VII)</td>
+                <td>18:00</td>
+            </tr>
+            <tr>
+                <td colspan="2">Növbəti dərs:<br><span id="next-lesson"></span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <a href="https://meet.google.com/zfs-uazh-eon">Google Meet</a>
     <ol>
+        <li><a href="./tasks.html">Tapşırıqlar</a></li>
         <li>
             <a href="./lesson1.html">Dəyişən tipləri (Data types)</a>
         </li>
@@ -19,7 +46,57 @@
         <li>
             <a href="./lesson3.html">İstifadəçidən input almaq</a>
         </li>
+        <li>
+            <a href="./lesson4.html">Dövr</a>
+        </li>
     </ol>
+    <script>
+        function uploadNextLesson() {
+            let element = document.querySelector("#next-lesson");
+            const today = new Date();
+            let day = today.getDay();
+            const daysOfWeek = [
+                "Bazar",
+                "Bazar ertəsi",
+                "Çərşənbə axşamı",
+                "Çərşənbə",
+                "Cümə axşamı",
+                "Cümə",
+                "Şənbə"];
+            const monthsOfYear = [
+                "yanvar",
+                "fevral",
+                "mart",
+                "aprel",
+                "may",
+                "iyun",
+                "iyul",
+                "avqust",
+                "sentyabr",
+                "oktyabr",
+                "noyabr",
+                "decabr"
+            ];
+            let hour = today.getHours();
+            let diff;
+            if (
+                (day == 0 && hour > 17)
+                || (day > 0 && day < 4)
+                || (day == 4 && hour < 18)
+            ) {
+                diff = (4 - day + 7) % 7;
+            } else {
+                diff = (0 - day + 7) % 7;
+            }
+            const nextLessonDay = new Date(today);
+            nextLessonDay.setDate(today.getDate() + diff);
+            element.innerText +=
+                `${nextLessonDay.getDate()} ${monthsOfYear[nextLessonDay.getMonth()]} ${nextLessonDay.getFullYear()}-ci il 
+        ${daysOfWeek[nextLessonDay.getDay()]} günü (${nextLessonDay.getDay() == 0 ? 7 : nextLessonDay.getDay()}-ci gün)`;
+
+        }
+        uploadNextLesson();
+    </script>
 </body>
 
 </html>
